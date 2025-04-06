@@ -35,3 +35,44 @@ body {
 .nav-links a:hover {
     color: #60a5fa;
 }
+
+
+.section {
+    min-height: 100vh;
+    padding: 10vh 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 8vh;
+    margin-bottom: 2vh;
+    color: #60a5fa;
+}
+
+h2 {
+    font-size: 6vh;
+    margin-bottom: 4vh;
+    color: #60a5fa;
+}
+
+.subtitle {
+    font-size: 3vh;
+    color: #60a5fa;
+    margin-bottom: 2vh;
+}
+
+.description {
+    font-size: 2.5vh;
+    max-width: 80%;
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+img {
+    width: 5vh;
+    height: 5vh;
+    object-fit: cover;
+    margin: 1vh;
+}
