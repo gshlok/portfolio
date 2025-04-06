@@ -44,7 +44,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
+
 h1 {
     font-size: 8vh;
     margin-bottom: 2vh;
@@ -75,4 +77,12 @@ img {
     height: 5vh;
     object-fit: cover;
     margin: 1vh;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
 }
