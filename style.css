@@ -122,15 +122,12 @@ img {
 }
 
 .contact-content {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4vh;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
     padding: 4vh;
 }
 
@@ -139,4 +136,39 @@ img {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 2vh;
+    border-radius: 1vh;
+    background-color: #111827;
+    border: none;
+    color: white;
+}
+.contact-form button {
+    width: 30%;
+    padding: 2vh;
+    border-radius: 1vh;
+    border-width: auto;
+    border-color: black;
+    background-color:#60a5fa;
+    text-align: center;
+    font-style: bold;
+
+}
+
+.contact-links {
+    display: flex;
+}
+
+.contact-link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 2vh;
+    color: white;
 }
