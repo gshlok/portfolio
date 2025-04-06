@@ -120,3 +120,23 @@ img {
     width: 100%;
     text-align: center;
 }
+
+.contact-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4vh;
+}
+
+.contact-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
