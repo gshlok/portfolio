@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #1f2937;
+    color: #f3f4f6;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    padding: 2vh 5%;
+    background: #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 4vh;
+    font-weight: 700;
+    color: #60a5fa;
+}
+
+.nav-links a {
+    color: #f3f4f6;
+    text-decoration: none;
+    margin-left: 3vw;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
