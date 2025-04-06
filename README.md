@@ -8,5 +8,5 @@ A responsive personal portfolio website built using just **HTML** and **CSS**, s
 
 - **Me**: Short intro about myself
 - **Education**: My current course
-- **Skills**: 
-- **Contact**: 
+- **Skills**: Display my skills
+- **Contact**: Reach out to me
