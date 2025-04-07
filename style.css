@@ -6,15 +6,15 @@
 }
 
 body {
-    background: #1f2937;
-    color: #f3f4f6;
+    background: #a0aecd;
+    color: #000000;
     text-align: center;
 }
 
 .navbar {
     width: 100%;
     padding: 2vh 5%;
-    background: #111827;
+    background: #6b7c96;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,19 +23,18 @@ body {
 .nav-logo {
     font-size: 4vh;
     font-weight: 700;
-    color: #60a5fa;
+    color: #000000;
 }
 
 .nav-links a {
-    color: #f3f4f6;
+    color: #000000;
     text-decoration: none;
     margin-left: 3vw;
 }
 
 .nav-links a:hover {
-    color: #60a5fa;
+    color: #4c5a73;
 }
-
 
 .section {
     min-height: 100vh;
@@ -50,18 +49,18 @@ body {
 h1 {
     font-size: 8vh;
     margin-bottom: 2vh;
-    color: #60a5fa;
+    color: black;
 }
 
 h2 {
     font-size: 6vh;
     margin-bottom: 4vh;
-    color: #60a5fa;
+    color: black;
 }
 
 .subtitle {
     font-size: 3vh;
-    color: #60a5fa;
+    color: black;
     margin-bottom: 2vh;
 }
 
@@ -97,7 +96,7 @@ img {
 }
 
 .education-card {
-    background: #111827;
+    background: #6b7c96; 
     padding: 4vh;
     border-radius: 2vh;
     width: 100%;
@@ -122,11 +121,10 @@ img {
 }
 
 .skill-card {
-    background: #111827;
+    background:#6b7c96; 
     padding: 4vh;
     border-radius: 2vh;
     width: 100%;
-    text-align: center;
 }
 
 .contact-content {
@@ -153,26 +151,30 @@ img {
     width: 100%;
     padding: 2vh;
     border-radius: 1vh;
-    background-color: #111827;
+    background-color: #6b7c96;
     border: none;
-    color: white;
+    color: #000000;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #4c5a73 ;
 }
 button {
     width: auto;
     padding: 2vh;
     border-radius: 1vh;
     border-width: auto;
-    border-color: black;
-    background-color:#60a5fa;
+    border-color: #6b7c96;
+    background-color:#4c5a73;
     text-align: center;
     font-style: bold;
-
 }
 
 button:hover {
-    background-color: #2563eb;
+    background-color: #3b495e;
     transition: 0.3s;
 }
+
 .contact-links {
     display: flex;
 }
@@ -182,5 +184,5 @@ button:hover {
     text-decoration: none;
     align-items: center;
     gap: 2vh;
-    color: white;
+    color: #000000;
 }
