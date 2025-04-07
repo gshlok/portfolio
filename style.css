@@ -103,6 +103,10 @@ img {
     width: 100%;
     text-align: center;
 }
+.education-grid :hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
 
 .skills-grid {
     display: grid;
@@ -111,6 +115,10 @@ img {
     width: 90%;
     margin: 0 auto;
     text-align: center;
+}
+.skills-grid :hover {
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 .skill-card {
@@ -149,8 +157,8 @@ img {
     border: none;
     color: white;
 }
-.contact-form button {
-    width: 30%;
+button {
+    width: auto;
     padding: 2vh;
     border-radius: 1vh;
     border-width: auto;
@@ -161,6 +169,10 @@ img {
 
 }
 
+button:hover {
+    background-color: #2563eb;
+    transition: 0.3s;
+}
 .contact-links {
     display: flex;
 }
