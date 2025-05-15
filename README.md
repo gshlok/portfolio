@@ -2,6 +2,7 @@
 
 A responsive personal portfolio website built using just **HTML** and **CSS**, showcasing who I am, my education, skills, and contact information — all with a personal touch of style.
 
+Also includes an AI chatbot which can answer relevant questions.
 ---
 
 ## 📌 Sections
