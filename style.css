@@ -6,15 +6,15 @@
 }
 
 body {
-    background: #a0aecd;
-    color: #000000;
+    background: #181818;
+    color: #F7F7F7;
     text-align: center;
 }
 
 .navbar {
     width: 100%;
     padding: 2vh 5%;
-    background: #6b7c96;
+    background: #181818;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,17 +23,18 @@ body {
 .nav-logo {
     font-size: 4vh;
     font-weight: 700;
-    color: #000000;
+    color: #FFEB3B; /* Accent Yellow */
 }
 
 .nav-links a {
-    color: #000000;
+    color: #F7F7F7;
     text-decoration: none;
     margin-left: 3vw;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #4c5a73;
+    color: #FFEB3B; /* Accent Yellow */
 }
 
 .section {
@@ -49,18 +50,18 @@ body {
 h1 {
     font-size: 8vh;
     margin-bottom: 2vh;
-    color: black;
+    color: #F7F7F7;
 }
 
 h2 {
     font-size: 6vh;
     margin-bottom: 4vh;
-    color: black;
+    color: #FFEB3B; /* Accent Yellow */
 }
 
 .subtitle {
     font-size: 3vh;
-    color: black;
+    color: #B0B0B0; /* Secondary Text */
     margin-bottom: 2vh;
 }
 
@@ -69,6 +70,7 @@ h2 {
     max-width: 80%;
     margin-bottom: 4vh;
     text-align: center;
+    color: #B0B0B0; /* Secondary Text */
 }
 
 img {
@@ -76,6 +78,7 @@ img {
     height: 5vh;
     object-fit: cover;
     margin: 1vh;
+    filter: brightness(0) invert(1); /* Makes icons white/yellow on dark bg */
 }
 
 .hero-content {
@@ -96,15 +99,19 @@ img {
 }
 
 .education-card {
-    background: #6b7c96; 
+    background: #232323;
     padding: 4vh;
     border-radius: 2vh;
     width: 100%;
     text-align: center;
+    color: #F7F7F7;
+    border: 2px solid #FFEB3B;
 }
-.education-grid :hover {
+
+.education-card:hover {
     transition: 0.3s;
     transform: scale(1.05);
+    box-shadow: 0 0 16px #FFEB3B33;
 }
 
 .skills-grid {
@@ -115,16 +122,20 @@ img {
     margin: 0 auto;
     text-align: center;
 }
-.skills-grid :hover {
-    transition: 0.3s;
-    transform: scale(1.05);
-}
 
 .skill-card {
-    background:#6b7c96; 
+    background: #232323;
     padding: 4vh;
     border-radius: 2vh;
     width: 100%;
+    color: #F7F7F7;
+    border: 2px solid #FFEB3B;
+}
+
+.skill-card:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #FFEB3B33;
 }
 
 .contact-content {
@@ -151,27 +162,31 @@ img {
     width: 100%;
     padding: 2vh;
     border-radius: 1vh;
-    background-color: #6b7c96;
-    border: none;
-    color: #000000;
+    background-color: #232323;
+    border: 1px solid #FFEB3B;
+    color: #F7F7F7;
 }
 
 input::placeholder, textarea::placeholder {
-    color: #4c5a73 ;
+    color: #B0B0B0;
 }
+
 button {
     width: auto;
-    padding: 2vh;
+    padding: 2vh 4vh;
     border-radius: 1vh;
-    border-width: auto;
-    border-color: #6b7c96;
-    background-color:#4c5a73;
+    border: none;
+    background-color: #FFEB3B;
     text-align: center;
-    font-style: bold;
+    font-weight: bold;
+    color: #181818;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
 button:hover {
-    background-color: #3b495e;
+    background-color: #FF5722; /* Accent Orange */
+    color: #F7F7F7;
     transition: 0.3s;
 }
 
@@ -184,5 +199,10 @@ button:hover {
     text-decoration: none;
     align-items: center;
     gap: 2vh;
-    color: #000000;
+    color: #FFEB3B;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #00C853; /* Jade Green accent on hover */
 }
