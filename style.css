@@ -23,7 +23,7 @@ body {
 .nav-logo {
     font-size: 4vh;
     font-weight: 700;
-    color: #FFEB3B; /* Accent Yellow */
+    color: #FFEB3B; 
 }
 
 .nav-links a {
@@ -34,7 +34,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #FFEB3B; /* Accent Yellow */
+    color: #FFEB3B;
 }
 
 .section {
@@ -56,12 +56,12 @@ h1 {
 h2 {
     font-size: 6vh;
     margin-bottom: 4vh;
-    color: #FFEB3B; /* Accent Yellow */
+    color: #FFEB3B; 
 }
 
 .subtitle {
     font-size: 3vh;
-    color: #B0B0B0; /* Secondary Text */
+    color: #B0B0B0; 
     margin-bottom: 2vh;
 }
 
@@ -70,7 +70,7 @@ h2 {
     max-width: 80%;
     margin-bottom: 4vh;
     text-align: center;
-    color: #B0B0B0; /* Secondary Text */
+    color: #B0B0B0; 
 }
 
 img {
@@ -78,7 +78,7 @@ img {
     height: 5vh;
     object-fit: cover;
     margin: 1vh;
-    filter: brightness(0) invert(1); /* Makes icons white/yellow on dark bg */
+    filter: brightness(0) invert(1); 
 }
 
 .hero-content {
@@ -185,7 +185,7 @@ button {
 }
 
 button:hover {
-    background-color: #FF5722; /* Accent Orange */
+    background-color: #FF5722; 
     color: #F7F7F7;
     transition: 0.3s;
 }
@@ -204,5 +204,5 @@ button:hover {
 }
 
 .contact-link:hover {
-    color: #00C853; /* Jade Green accent on hover */
+    color: #00C853; 
 }
