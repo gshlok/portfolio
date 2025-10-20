@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
             <div className="hero-content">
                 <h1>Hello, I'm Shlok</h1>
                 <p className="subtitle">BE ISE Student & Developer</p>
-                <p className="description">Currently in 2nd semester at RVCE</p>
+                <p className="description">Currently in 3rd semester at RVCE</p>
                 <div className="social-links">
                     <a href="https://in.linkedin.com/in/shlok-g" className="social-link">
                         <img src="/images/linkedin.png" alt="LinkedIn" />

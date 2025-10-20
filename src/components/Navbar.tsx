@@ -29,16 +29,6 @@ const Navbar: React.FC = () => {
             links: [
                 { label: "My Projects", href: "#projects", ariaLabel: "View My Projects" }
             ]
-        },
-        {
-            label: "Connect",
-            bgColor: "#181818",
-            textColor: "#FFEB3B",
-            links: [
-                { label: "Email", href: "mailto:shlok@example.com", ariaLabel: "Email me" },
-                { label: "LinkedIn", href: "https://linkedin.com/in/shlok", ariaLabel: "LinkedIn Profile" },
-                { label: "GitHub", href: "https://github.com/shlok", ariaLabel: "GitHub Profile" }
-            ]
         }
     ];
 
