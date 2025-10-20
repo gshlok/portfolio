@@ -205,6 +205,12 @@ const CardNav: React.FC<CardNavProps> = ({
                         type="button"
                         className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
                         style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+                        onClick={() => {
+                            const contactSection = document.getElementById('contact');
+                            if (contactSection) {
+                                contactSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
                     >
                         Contact Me
                     </button>
