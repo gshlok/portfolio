@@ -2,27 +2,68 @@ import React from 'react';
 import './Skills.css';
 
 const Skills: React.FC = () => {
-    const skills = [
+    const programmingLanguages = [
+        { name: 'C++', description: 'Object-oriented programming language' },
         { name: 'HTML', description: 'Markup language for creating web pages' },
         { name: 'CSS', description: 'Styling language for web design' },
-        { name: 'JavaScript', description: 'Scripting language for interactive web applications' },
-        { name: 'React', description: 'JavaScript library for building user interfaces' },
-        { name: 'Git', description: 'Version control system for code management' },
-        { name: 'C++', description: 'Object-oriented programming language' }
+        { name: 'Python', description: 'High-level programming language for general-purpose programming' },
+        { name: 'JavaScript', description: 'Scripting language for interactive web applications' }
+    ];
+
+    const frameworksTools = [
+        { name: 'React.js', description: 'JavaScript library for building user interfaces' },
+        { name: 'n8n', description: 'Workflow automation tool' },
+        { name: 'VS Code', description: 'Source-code editor developed by Microsoft' }
+    ];
+
+    const versionControl = [
+        { name: 'Git', description: 'Distributed version control system' },
+        { name: 'GitHub', description: 'Cloud-based hosting service for version control' }
     ];
 
     return (
         <section id="skills" className="section">
             <h2>Skills</h2>
             <div className="skills-grid">
-                {skills.map((skill, index) => (
-                    <div className="skill-card" key={index}>
-                        <h3>{skill.name}</h3>
-                        <div className="skill-description">
-                            <p>{skill.description}</p>
-                        </div>
+                <div className="skills-category">
+                    <h3>Programming Languages</h3>
+                    <div className="skills-list">
+                        {programmingLanguages.map((skill, index) => (
+                            <div className="skill-card" key={`pl-${index}`}>
+                                <h4>{skill.name}</h4>
+                                <div className="skill-description">
+                                    <p>{skill.description}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
+                <div className="skills-category">
+                    <h3>Frameworks and Tools</h3>
+                    <div className="skills-list">
+                        {frameworksTools.map((skill, index) => (
+                            <div className="skill-card" key={`ft-${index}`}>
+                                <h4>{skill.name}</h4>
+                                <div className="skill-description">
+                                    <p>{skill.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="skills-category">
+                    <h3>Version Control</h3>
+                    <div className="skills-list">
+                        {versionControl.map((skill, index) => (
+                            <div className="skill-card" key={`vc-${index}`}>
+                                <h4>{skill.name}</h4>
+                                <div className="skill-description">
+                                    <p>{skill.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );

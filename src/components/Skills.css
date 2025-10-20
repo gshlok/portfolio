@@ -14,13 +14,37 @@
     color: #FFEB3B;
 }
 
+#skills h3 {
+    color: #FFEB3B;
+    font-size: 3vh; /* Reduced from 6vh to 3vh */
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+#skills h4 {
+    margin-bottom: 2vh;
+    font-size: 1.5rem;
+}
+
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-    gap: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
     width: 90%;
     margin: 0 auto;
     text-align: center;
+}
+
+.skills-category {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.skills-category .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4vh;
 }
 
 .skill-card {
@@ -38,15 +62,19 @@
     box-shadow: 0 0 16px #FFEB3B33;
 }
 
-.skill-card h3 {
+.skill-card h4 {
     margin-bottom: 2vh;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: 1fr;
         width: 95%;
+    }
+    
+    .skills-category .skills-list {
+        grid-template-columns: 1fr;
+        width: 100%;
     }
 
     .skill-card {
@@ -55,5 +83,13 @@
 
     #skills h2 {
         font-size: 4vh;
+    }
+    
+    #skills h3 {
+        font-size: 2.5vh; /* Reduced from 3vh to 2.5vh for mobile */
+    }
+    
+    #skills h4 {
+        font-size: 1.2rem;
     }
 }

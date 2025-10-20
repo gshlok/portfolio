@@ -17,8 +17,9 @@ const Navbar: React.FC = () => {
             bgColor: "#181818",
             textColor: "#FFEB3B",
             links: [
-                { label: "Technical", href: "#skills", ariaLabel: "Technical Skills" },
-                { label: "Experience", href: "#skills", ariaLabel: "Work Experience" }
+                { label: "Programming Languages", href: "#skills", ariaLabel: "Programming Languages" },
+                { label: "Frameworks and Tools", href: "#skills", ariaLabel: "Frameworks and Tools" },
+                { label: "Version Control", href: "#skills", ariaLabel: "Version Control" }
             ]
         },
         {
