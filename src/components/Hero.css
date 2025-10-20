@@ -22,6 +22,32 @@ h1 {
     color: #F7F7F7;
 }
 
+.typewriter {
+    font-size: 8vh;
+    margin-bottom: 2vh;
+    color: #F7F7F7;
+    font-family: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.5em;
+    background-color: #FFEB3B;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .subtitle {
     font-size: 3vh;
     color: #B0B0B0;
@@ -75,6 +101,10 @@ button:hover {
 /* Responsive design */
 @media (max-width: 768px) {
     h1 {
+        font-size: 6vh;
+    }
+    
+    .typewriter {
         font-size: 6vh;
     }
 
