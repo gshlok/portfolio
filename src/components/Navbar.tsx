@@ -23,6 +23,14 @@ const Navbar: React.FC = () => {
             ]
         },
         {
+            label: "Projects",
+            bgColor: "#181818",
+            textColor: "#FFEB3B",
+            links: [
+                { label: "My Projects", href: "#projects", ariaLabel: "View My Projects" }
+            ]
+        },
+        {
             label: "Connect",
             bgColor: "#181818",
             textColor: "#FFEB3B",
