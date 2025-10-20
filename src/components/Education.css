@@ -1,6 +1,6 @@
 #education {
     min-height: 100vh;
-    padding: 10vh 5% 5%;
+    padding: 5vh 5% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,8 +9,8 @@
 }
 
 #education h2 {
-    font-size: 6vh;
-    margin-bottom: 4vh;
+    font-size: 4vh;
+    margin-bottom: 3vh;
     color: #FFEB3B;
     text-align: center;
 }
@@ -18,9 +18,9 @@
 .education-timeline {
     position: relative;
     width: 90%;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 /* Vertical line */
@@ -29,7 +29,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 4px;
+    width: 3px;
     background: #FFEB3B;
     left: 50%;
     transform: translateX(-50%);
@@ -37,7 +37,7 @@
 
 .education-item {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
@@ -45,20 +45,20 @@
 .education-item::after {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     background-color: #FFEB3B;
-    border: 4px solid #181818;
+    border: 3px solid #181818;
     border-radius: 50%;
-    top: 30px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    box-shadow: 0 0 8px rgba(255, 235, 59, 0.5);
 }
 
 .education-item:nth-child(odd) .education-content {
-    padding: 30px;
+    padding: 20px;
     text-align: right;
     position: relative;
     width: 45%;
@@ -68,7 +68,7 @@
 }
 
 .education-item:nth-child(even) .education-content {
-    padding: 30px;
+    padding: 20px;
     text-align: left;
     position: relative;
     width: 45%;
@@ -79,37 +79,37 @@
 
 .education-content {
     background: #232323;
-    border-radius: 2vh;
+    border-radius: 1.5vh;
     color: #F7F7F7;
-    border: 2px solid #FFEB3B;
-    box-shadow: 0 0 15px rgba(255, 235, 59, 0.2);
+    border: 1px solid #FFEB3B;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.2);
     transition: all 0.3s ease;
 }
 
 .education-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(255, 235, 59, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 3px 15px rgba(255, 235, 59, 0.4);
 }
 
 .education-content img {
-    width: 6vh;
-    height: 6vh;
+    width: 4vh;
+    height: 4vh;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     filter: brightness(0) invert(1);
 }
 
 .education-content h3 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #FFEB3B;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .education-content p {
-    margin: 8px 0;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .education-item::after {
@@ -121,7 +121,7 @@
         box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7);
     }
     70% {
-        box-shadow: 0 0 0 10px rgba(255, 235, 59, 0);
+        box-shadow: 0 0 0 8px rgba(255, 235, 59, 0);
     }
     100% {
         box-shadow: 0 0 0 0 rgba(255, 235, 59, 0);
@@ -138,32 +138,38 @@
 /* Responsive design */
 @media (max-width: 768px) {
     .education-timeline::before {
-        left: 31px;
+        left: 25px;
     }
     
     .education-item::after {
-        left: 31px;
+        left: 25px;
+        width: 16px;
+        height: 16px;
     }
     
     .education-item:nth-child(odd) .education-content,
     .education-item:nth-child(even) .education-content {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
         float: none;
-        margin-left: 60px;
+        margin-left: 50px;
         margin-right: 0;
         text-align: left;
-        padding: 20px;
+        padding: 15px;
     }
     
     .education-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     .education-content p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     #education h2 {
-        font-size: 4vh;
+        font-size: 3vh;
+    }
+    
+    .education-item {
+        margin-bottom: 25px;
     }
 }
