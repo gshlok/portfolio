@@ -1,0 +1,36 @@
+.navbar {
+    width: 100%;
+    padding: 2vh 5%;
+    background: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 4vh;
+    font-weight: 700;
+    color: #FFEB3B;
+}
+
+.nav-links a {
+    color: #F7F7F7;
+    text-decoration: none;
+    margin-left: 3vw;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFEB3B;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links a {
+        margin-left: 2vw;
+        font-size: 0.9rem;
+    }
+}
