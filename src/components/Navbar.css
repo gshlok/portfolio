@@ -34,3 +34,6 @@
         font-size: 0.9rem;
     }
 }
+
+/* Navbar.css is now deprecated as we're using CardNav component */
+/* All styles are now in CardNav.css */
