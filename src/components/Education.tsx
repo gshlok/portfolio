@@ -12,6 +12,18 @@ const Education: React.FC = () => {
                     <p>RV College of Engineering</p>
                     <p>2024 - Present</p>
                 </div>
+                <div className="education-card">
+                    <img src="/images/education.png" alt="Education" />
+                    <h3>II PU</h3>
+                    <p>RVPB PU College</p>
+                    <p>2022 - 2024</p>
+                </div>
+                <div className="education-card">
+                    <img src="/images/education.png" alt="Education" />
+                    <h3>X CBSE Board</h3>
+                    <p>SVEI Public School</p>
+                    <p>Graduated 2022</p>
+                </div>
             </div>
         </section>
     );
