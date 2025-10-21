@@ -158,11 +158,11 @@ const CardNav: React.FC<CardNavProps> = ({
     const getIcon = (label: string): string | undefined => {
         switch (label.toLowerCase()) {
             case 'linkedin':
-                return '/images/linkedin.png';
+                return '/portfolio/images/linkedin.png';
             case 'github':
-                return '/images/github.png';
+                return '/portfolio/images/github.png';
             case 'email':
-                return '/images/email.png';
+                return '/portfolio/images/email.png';
             default:
                 return undefined;
         }
