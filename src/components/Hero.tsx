@@ -46,13 +46,13 @@ const Hero: React.FC = () => {
                 <p className="description">Currently in 3rd semester at RVCE</p>
                 <div className="social-links">
                     <a href="https://in.linkedin.com/in/shlok-g" className="social-link">
-                        <img src="/images/linkedin.png" alt="LinkedIn" />
+                        <img src="/portfolio/images/linkedin.png" alt="LinkedIn" />
                     </a>
-                    <a href="#" className="social-link">
-                        <img src="/images/github.png" alt="GitHub" />
+                    <a href="https://github.com/gshlok" className="social-link">
+                        <img src="/portfolio/images/github.png" alt="GitHub" />
                     </a>
                     <br /><br />
-                    <a href="/CV/Resume 2.pdf" className="social-link" download="Resume.pdf">
+                    <a href="/portfolio/CV/Resume 2.pdf" className="social-link" download="Resume.pdf">
                         <button type="button">Download CV</button>
                     </a>
                 </div>
