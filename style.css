@@ -89,9 +89,15 @@ img {
     width: 90%;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 4vh;
     width: 90%;
     margin: 0 auto;
@@ -148,27 +154,24 @@ img {
     padding: 4vh;
 }
 
-.contact-form {
-    width: 90%;
+.contact-links {
     display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    align-items: center;
+    gap: 3vh;
     justify-content: center;
+    align-items: center;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 2vh;
-    border-radius: 1vh;
-    background-color: #232323;
-    border: 1px solid #FFEB3B;
-    color: #F7F7F7;
+.contact-link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 2vh;
+    color: #FFEB3B;
+    transition: color 0.3s;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #B0B0B0;
+.contact-link:hover {
+    color: #00C853; 
 }
 
 button {
@@ -188,21 +191,4 @@ button:hover {
     background-color: #FF5722; 
     color: #F7F7F7;
     transition: 0.3s;
-}
-
-.contact-links {
-    display: flex;
-}
-
-.contact-link {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    gap: 2vh;
-    color: #FFEB3B;
-    transition: color 0.3s;
-}
-
-.contact-link:hover {
-    color: #00C853; 
 }
