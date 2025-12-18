@@ -150,6 +150,35 @@ const CardNav: React.FC<CardNavProps> = ({
         }
     };
 
+    const closeMenu = () => {
+        const tl = tlRef.current;
+        if (!tl || !isExpanded) return;
+        setIsHamburgerOpen(false);
+        tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
+        tl.reverse();
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Escape' && isExpanded) {
+            closeMenu();
+        } else if ((e.key === ' ' || e.key === 'Enter') && e.target === e.currentTarget) {
+            e.preventDefault();
+            toggleMenu();
+        }
+    };
+
+    // Global escape key listener
+    useLayoutEffect(() => {
+        const handleGlobalKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape' && isExpanded) {
+                closeMenu();
+            }
+        };
+
+        document.addEventListener('keydown', handleGlobalKeyDown);
+        return () => document.removeEventListener('keydown', handleGlobalKeyDown);
+    }, [isExpanded]);
+
     const setCardRef = (i: number) => (el: HTMLDivElement | null) => {
         if (el) cardsRef.current[i] = el;
     };
@@ -181,8 +210,10 @@ const CardNav: React.FC<CardNavProps> = ({
                     <div
                         className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''} group h-full flex flex-col items-center justify-center cursor-pointer gap-[6px] order-2 md:order-none`}
                         onClick={toggleMenu}
+                        onKeyDown={handleKeyDown}
                         role="button"
                         aria-label={isExpanded ? 'Close menu' : 'Open menu'}
+                        aria-expanded={isExpanded}
                         tabIndex={0}
                         style={{ color: menuColor || '#000' }}
                     >

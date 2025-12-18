@@ -78,7 +78,8 @@
 }
 
 .education-content {
-    background: #232323;
+    background: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
     border-radius: 1.5vh;
     color: #F7F7F7;
     border: 1px solid #FFEB3B;

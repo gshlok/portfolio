@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
             title: "Slack n8n Automator Bot",
             technologies: "n8n, Slack, OpenAI, Anthropic",
             description: "Built an AI-powered Slack bot using n8n, OpenAI GPT, and Slack API to convert natural language requests into fully configured automation workflows.",
-            githubUrl: "https://github.com/gshlok/slack-n8n-automatorbot"
+            githubUrl: "https://github.com/gshlok/slack-n8n-automator_bot"
         },
         {
             title: "AchainI",

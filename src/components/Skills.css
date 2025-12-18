@@ -36,7 +36,8 @@
 }
 
 .tab {
-    background: #232323;
+    background: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
     padding: 2vh 3vh;
     border-radius: 1.5vh;
     width: 30%;
@@ -95,7 +96,8 @@
 }
 
 .skill-card {
-    background: #232323;
+    background: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
     padding: 2vh 3vh;
     border-radius: 1.5vh;
     width: 100%;
