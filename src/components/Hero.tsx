@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                         <img src="/portfolio/images/github.png" alt="GitHub" />
                     </a>
                     <br /><br />
-                    <a href="/portfolio/CV/Resume 2.pdf" className="social-link" download="Resume.pdf">
+                    <a href="/portfolio/CV/RESUME 4.pdf" className="social-link" download="Resume.pdf">
                         <button type="button">Download CV</button>
                     </a>
                 </div>

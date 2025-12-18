@@ -45,38 +45,13 @@ const CardNav: React.FC<CardNavProps> = ({
     const tlRef = useRef<gsap.core.Timeline | null>(null);
 
     const calculateHeight = () => {
-        const navEl = navRef.current;
-        if (!navEl) return 260;
-
         const isMobile = window.matchMedia('(max-width: 768px)').matches;
         if (isMobile) {
-            const contentEl = navEl.querySelector('.card-nav-content') as HTMLElement;
-            if (contentEl) {
-                const wasVisible = contentEl.style.visibility;
-                const wasPointerEvents = contentEl.style.pointerEvents;
-                const wasPosition = contentEl.style.position;
-                const wasHeight = contentEl.style.height;
-
-                contentEl.style.visibility = 'visible';
-                contentEl.style.pointerEvents = 'auto';
-                contentEl.style.position = 'static';
-                contentEl.style.height = 'auto';
-
-                contentEl.offsetHeight;
-
-                const topBar = 60;
-                const padding = 16;
-                const contentHeight = contentEl.scrollHeight;
-
-                contentEl.style.visibility = wasVisible;
-                contentEl.style.pointerEvents = wasPointerEvents;
-                contentEl.style.position = wasPosition;
-                contentEl.style.height = wasHeight;
-
-                return topBar + contentHeight + padding;
-            }
+            // Mobile: stacked cards - 60px top + (4 cards × 40px) + (3 gaps × 4px) + 8px padding
+            return 60 + (4 * 40) + (3 * 4) + 8;
         }
-        return 260;
+        // Desktop: horizontal cards - 60px top + 40px cards + 8px padding
+        return 108;
     };
 
     const createTimeline = () => {
@@ -90,11 +65,11 @@ const CardNav: React.FC<CardNavProps> = ({
 
         tl.to(navEl, {
             height: calculateHeight,
-            duration: 0.2,
-            ease
+            duration: 0.4,
+            ease: 'power2.inOut'
         });
 
-        tl.to(cardsRef.current, { y: 0, opacity: 1, duration: 0.2, ease, stagger: 0.04 }, '-=0.1');
+        tl.to(cardsRef.current, { y: 0, opacity: 1, duration: 0.3, ease: 'power2.out', stagger: 0.06 }, '-=0.2');
 
         return tl;
     };
@@ -247,21 +222,48 @@ const CardNav: React.FC<CardNavProps> = ({
                 </div>
 
                 <div
-                    className={`card-nav-content absolute left-0 right-0 top-[60px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
-                        } md:flex-row md:items-end md:gap-[12px]`}
+                    className={`card-nav-content absolute left-0 right-0 top-[60px] bottom-0 p-1 flex flex-col items-stretch gap-1 justify-start z-[1] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'}
+                        } md:flex-row md:items-end md:gap-[6px]`}
                     aria-hidden={!isExpanded}
                 >
-                    {(items || []).slice(0, 3).map((item, idx) => (
+                    {(items || []).map((item, idx) => (
                         <div
                             key={`${item.label}-${idx}`}
-                            className="nav-card select-none relative flex flex-col gap-2 p-[12px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]"
+                            className="nav-card select-none relative flex flex-row items-center justify-center gap-[0.15rem] p-[8px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[40px] max-h-[40px] md:h-full md:min-h-0 md:max-h-[40px] md:flex-[1_1_0%]"
                             ref={setCardRef(idx)}
                             style={{ backgroundColor: item.bgColor, color: item.textColor }}
+                            onClick={() => {
+                                const firstLink = item.links?.[0];
+                                if (firstLink?.href) {
+                                    const targetId = firstLink.href.replace('#', '');
+                                    const element = document.getElementById(targetId);
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                        closeMenu();
+                                    }
+                                }
+                            }}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    const firstLink = item.links?.[0];
+                                    if (firstLink?.href) {
+                                        const targetId = firstLink.href.replace('#', '');
+                                        const element = document.getElementById(targetId);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                            closeMenu();
+                                        }
+                                    }
+                                }
+                            }}
                         >
-                            <div className="nav-card-label font-normal tracking-[-0.5px] text-[18px] md:text-[22px]">
+                            <div className="nav-card-label font-semibold tracking-[-0.5px] text-[14px] md:text-[16px]">
                                 {item.label}
                             </div>
-                            <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
+                            <div className="nav-card-links mt-auto flex flex-col gap-[1px]">
                                 {item.links?.map((lnk, i) => (
                                     <a
                                         key={`${lnk.label}-${i}`}
