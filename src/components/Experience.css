@@ -68,11 +68,31 @@
     margin: 0 auto;
     max-width: 85%;
     text-align: left;
+    cursor: pointer;
+    position: relative;
 }
 
 .experience-content:hover {
     transform: translateY(-3px);
     box-shadow: 0 3px 15px rgba(255, 235, 59, 0.4);
+}
+
+.experience-content.expanded {
+    box-shadow: 0 5px 20px rgba(255, 235, 59, 0.6);
+}
+
+.experience-content::after {
+    content: '▼';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #FFEB3B;
+    font-size: 1.5vh;
+    transition: transform 0.3s ease;
+}
+
+.experience-content.expanded::after {
+    transform: rotate(180deg);
 }
 
 .experience-header h3 {
@@ -107,6 +127,16 @@
 .experience-details {
     list-style: none;
     padding: 0;
+    margin: 15px 0 0 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.experience-content.expanded .experience-details {
+    max-height: 500px;
+    opacity: 1;
     margin: 15px 0;
 }
 
