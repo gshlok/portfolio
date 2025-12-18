@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
                                     Rilo
                                 </a>
                             </p>
-                            <p className="experience-duration">November 2024 - Present</p>
+                            <p className="experience-duration">November 2024 - Present • Bangalore, Karnataka</p>
                         </div>
                         <div className="experience-links">
                             <a href="https://www.getrilo.ai/" target="_blank" rel="noopener noreferrer" className="experience-link" onClick={(e) => e.stopPropagation()}>
