@@ -42,8 +42,7 @@ const Hero: React.FC = () => {
         <section id="home" className="section hero-section">
             <div className="hero-content">
                 <h1 className="typewriter">{text}<span className="cursor">|</span></h1>
-                <p className="subtitle">BE ISE Student & Developer</p>
-                <p className="description">Currently in 3rd semester at RVCE</p>
+                <p className="subtitle">Automation Intern at Rilo and 3rd Sem BE ISE Student at RVCE</p>
                 <div className="social-links">
                     <a href="https://in.linkedin.com/in/shlok-g" className="social-link">
                         <img src="/portfolio/images/linkedin.png" alt="LinkedIn" />

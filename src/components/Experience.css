@@ -1,0 +1,219 @@
+#experience {
+    min-height: 100vh;
+    padding: 5vh 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#experience h2 {
+    font-size: 6vh;
+    margin-bottom: 3vh;
+    color: #FFEB3B;
+    text-align: center;
+}
+
+.experience-timeline {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+/* Vertical line */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #FFEB3B;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Timeline dot */
+.experience-item::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #FFEB3B;
+    border: 3px solid #181818;
+    border-radius: 50%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(255, 235, 59, 0.5);
+}
+
+.experience-content {
+    background: #232323;
+    border-radius: 1.5vh;
+    color: #F7F7F7;
+    border: 1px solid #FFEB3B;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.2);
+    transition: all 0.3s ease;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 85%;
+    text-align: left;
+}
+
+.experience-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 15px rgba(255, 235, 59, 0.4);
+}
+
+.experience-header h3 {
+    font-size: 2.5vh;
+    color: #FFEB3B;
+    margin-bottom: 8px;
+}
+
+.experience-header .company-name {
+    font-size: 2vh;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.experience-header .company-name a {
+    color: #F7F7F7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.experience-header .company-name a:hover {
+    color: #FFEB3B;
+}
+
+.experience-header .experience-duration {
+    font-size: 1.8vh;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.experience-details {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.experience-details li {
+    font-size: 1.8vh;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.experience-details li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #FFEB3B;
+}
+
+.experience-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.experience-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 235, 59, 0.1);
+    border: 1px solid #FFEB3B;
+    border-radius: 5px;
+    color: #FFEB3B;
+    text-decoration: none;
+    font-size: 1.6vh;
+    transition: all 0.3s ease;
+}
+
+.experience-link:hover {
+    background: #FFEB3B;
+    color: #181818;
+    transform: translateY(-2px);
+}
+
+.experience-link .link-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: none;
+    background: transparent;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #experience {
+        padding: 3vh 3%;
+    }
+
+    #experience h2 {
+        font-size: 4vh;
+    }
+
+    .experience-timeline::before {
+        left: 20px;
+    }
+
+    .experience-item::after {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+    .experience-content {
+        max-width: 100%;
+        margin-left: 50px;
+        padding: 15px;
+    }
+
+    .experience-header h3 {
+        font-size: 2.2vh;
+    }
+
+    .experience-header .company-name {
+        font-size: 1.8vh;
+    }
+
+    .experience-header .experience-duration {
+        font-size: 1.6vh;
+    }
+
+    .experience-details li {
+        font-size: 1.6vh;
+    }
+
+    .experience-link {
+        font-size: 1.4vh;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .experience-link {
+        text-align: center;
+    }
+}
