@@ -1,128 +1,623 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>G Shlok | Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="nav-logo">SG</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>G Shlok | Portfolio</title>
+  <meta name="description" content="Shlok — Information Science undergrad at RVCE and AI intern at Rilo. I build AI agents and automations.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="portfolio-root">
 
-        <section id="home" class="section">
-            <div class="hero-content">
-                <h1>Hello, I'm Shlok</h1>
-                <p class="subtitle">BE ISE Student & Developer</p>
-                <p class="description">Currently in 3rd semester at RVCE</p>
-                <div class="social-links">
-                    <a href="https://in.linkedin.com/in/shlok-g" class="social-link">
-                        <img src="./images/linkedin.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/gshlok" class="social-link">
-                        <img src="./images/github.png" alt="GitHub">
-                    </a><br><br>
-                    <a href="./CV/Resume 2.pdf" class="social-link" download="Resume.pdf"><button type="button">Download CV</button></a>
-                </div>
-            </div>
-        </section>
+  <!-- ambient glow — persists across sections, fades over hero (its own glow) + contact -->
+  <div id="ambient-glow" aria-hidden="true">
+    <div class="ag-blob" style="left:var(--agx, 80%); top:var(--agy, 22%); width:120vw; height:120vh; background:radial-gradient(closest-side, rgba(245,224,0,calc(var(--glow)*0.55)) 0%, rgba(245,224,0,calc(var(--glow)*0.20)) 40%, rgba(170,112,0,calc(var(--glow)*0.08)) 60%, rgba(11,11,11,0) 78%); animation:breathe 9s ease-in-out infinite;"></div>
+    <div class="ag-blob" style="left:var(--agx2, 12%); top:var(--agy2, 80%); width:95vw; height:95vh; background:radial-gradient(closest-side, rgba(255,170,0,calc(var(--glow)*0.32)) 0%, rgba(255,150,0,calc(var(--glow)*0.10)) 48%, rgba(11,11,11,0) 74%); animation:breathe 11s ease-in-out infinite 1s;"></div>
+  </div>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <img src="./images/education.png" alt="Education">
-                    <h3>BE in Information Science Engineering</h3>
-                    <p>RV College of Engineering</p>
-                    <p>2024 - Present</p>
-                </div>
-                <div class="education-card">
-                    <img src="./images/education.png" alt="Education">
-                    <h3>RVPB PU College</h3>
-                    <p>II PU</p>
-                    <p>2022 - 2024</p>
-                </div>
-                <div class="education-card">
-                    <img src="./images/education.png" alt="Education">
-                    <h3>SVEI Public School</h3>
-                    <p>X CBSE Board</p>
-                    <p>Graduated 2022</p>
-                </div>
-            </div>
-        </section>
+  <!-- ============ HERO ============ -->
+  <section id="hero" style="position:relative; min-height:100vh; display:flex; flex-direction:column; padding:clamp(22px,3vw,46px); box-sizing:border-box; overflow:hidden;">
+    <div style="position:absolute; left:var(--gx, 74%); top:var(--gy, 17%); width:165vw; height:155vh; transform:translate(-50%,-50%); pointer-events:none; z-index:0; animation:breathe 9s ease-in-out infinite; background:radial-gradient(closest-side, rgba(245,224,0,calc(var(--glow)*0.9)) 0%, rgba(245,224,0,calc(var(--glow)*0.34)) 36%, rgba(170,112,0,calc(var(--glow)*0.12)) 58%, rgba(11,11,11,0) 78%); filter:blur(10px);"></div>
+    <div style="position:absolute; left:var(--gx2, 90%); top:var(--gy2, 40%); width:115vw; height:118vh; transform:translate(-50%,-50%); pointer-events:none; z-index:0; animation:breathe 11s ease-in-out infinite 1s; background:radial-gradient(closest-side, rgba(255,186,0,calc(var(--glow)*0.48)) 0%, rgba(255,150,0,calc(var(--glow)*0.15)) 48%, rgba(11,11,11,0) 74%); filter:blur(8px);"></div>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>HTML</h3>
-                    <div class="skill-description">
-                        <p>Markup language for creating web pages</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>CSS</h3>
-                    <div class="skill-description">
-                        <p>Styling language for web design</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <div class="skill-description">
-                        <p>Scripting language for interactive web applications</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>React</h3>
-                    <div class="skill-description">
-                        <p>JavaScript library for building user interfaces</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Git</h3>
-                    <div class="skill-description">
-                        <p>Version control system for code management</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>C++</h3>
-                    <div class="skill-description">
-                        <p>Object-oriented programming language</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div style="position:relative; z-index:2; max-width:540px;">
+      <p style="margin:0; font-size:clamp(15px,1.5vw,20px); line-height:1.5; letter-spacing:-0.01em; color:#ECECE8;">Information Science undergrad at RVCE,<br><span style="font-weight: 700; color: var(--accent);">AI Intern @ Rilo</span></p>
+    </div>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-content">
-                <div class="contact-links">
-                    <a href="mailto:shlokgraman@gmail.com" class="contact-link">
-                        <img src="./images/email.png" alt="Email">
-                    </a>
-                    <a href="https://in.linkedin.com/in/shlok-g" class="contact-link">
-                        <img src="./images/linkedin.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/gshlok" class="contact-link">
-                        <img src="./images/github.png" alt="GitHub">
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-9c648a72-05d5-4081-8c12-0efa5eed319c" data-elfsight-app-lazy></div>
-    </body>
+    <div style="flex:1; min-height:30px;"></div>
+
+    <div style="position:relative; z-index:2; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 clamp(22px,3.4vw,64px); line-height:0.84; letter-spacing:-0.035em; animation:rise 1.15s cubic-bezier(.2,.75,.2,1) both;">
+      <span style="font-weight:800; font-size:clamp(74px,17vw,300px); color:#F6F6F3;">G</span>
+      <span style="display:inline-flex; align-items:baseline;">
+        <span style="font-weight:800; font-size:clamp(74px,17vw,300px); background:linear-gradient(176deg,#FFFFFF 0%,#FBF3A0 46%,var(--accent) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">Shlok</span><span style="font-weight:800; font-size:clamp(74px,17vw,300px); color:var(--accent);">.</span>
+      </span>
+    </div>
+
+    <div style="position:relative; z-index:2; height:1px; background:rgba(246,246,243,0.18); margin:clamp(20px,2.4vw,32px) 0 clamp(14px,1.6vw,20px);"></div>
+
+    <div style="position:relative; z-index:2; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase;">
+      <span style="color:var(--accent);">↗ 2026</span>
+      <div style="display:flex; gap:clamp(12px,1.6vw,24px); align-items:center; color:#CFCFCB;">
+        <a href="https://github.com/gshlok" class="navlink" target="_blank" rel="noopener">Github</a><span style="opacity:.35;">/</span>
+        <a href="https://in.linkedin.com/in/shlok-g" class="navlink" target="_blank" rel="noopener">LinkedIn</a><span style="opacity:.35;">/</span>
+        <a href="mailto:shlokgraman@gmail.com" class="navlink">Email</a><span style="opacity:.35;">/</span>
+        <a href="./CV/Resume%202.pdf" class="navlink" download="Shlok-Resume.pdf" style="color:var(--accent);">Resume ↓</a>
+      </div>
+      <div style="display:flex; gap:clamp(12px,1.6vw,24px); color:#F6F6F3;">
+        <a href="#work" class="navlink">Work</a>
+        <a href="#about" class="navlink">About</a>
+        <a href="#contact" class="navlink">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="grid-2" style="position:relative; padding:clamp(64px,9vw,150px) clamp(22px,3vw,46px); display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(34px,5vw,84px); align-items:center;">
+    <div class="reveal" style="position:relative;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.2em; color:rgba(244,244,242,0.42); margin-bottom:clamp(28px,4vw,56px);">(01) — ABOUT</div>
+      <p id="about-text" style="margin:0; font-size:clamp(24px,2.7vw,42px); line-height:1.32; letter-spacing:-0.015em; color:#F1F1EE; max-width:20ch;">I am&nbsp;<span style="font-weight: 700; color: var(--accent);">Shlok</span>. A 4th Sem Information Science undergraduate at RVCE and AI intern at Rilo, I build AI agents and automations.</p>
+      <a href="#timeline" class="info-link" style="display:inline-flex; align-items:center; gap:8px; margin-top:clamp(30px,4vw,52px); font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:var(--accent); text-decoration:none;">INFO <span style="display:inline-block;">↓</span></a>
+    </div>
+
+    <div class="reveal about-media" style="position:relative; height:clamp(380px,46vw,620px);">
+      <div style="position:absolute; inset:-6% -2% 0 8%; background:radial-gradient(58% 58% at 58% 44%, rgba(245,224,0,calc(var(--glow)*0.85)) 0%, rgba(190,112,0,calc(var(--glow)*0.28)) 44%, rgba(11,11,11,0) 75%); filter:blur(8px); z-index:0; animation:breathe 10s ease-in-out infinite;"></div>
+      <div class="about-photo" style="position:absolute; inset:0; z-index:1; border-radius:240px 240px 0 0; overflow:hidden; border:1px solid rgba(245,224,0,0.14);">
+        <div style="position:absolute; inset:0; background:linear-gradient(165deg, #1a1810 0%, #110f0c 55%, #0a0a08 100%);"></div>
+        <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(245,224,0,0.16) 1px, transparent 1.6px); background-size:22px 22px; opacity:0.45;"></div>
+        <div style="position:absolute; left:50%; top:42%; width:150%; height:120%; transform:translate(-50%,-50%); background:radial-gradient(closest-side, rgba(255,247,170,calc(var(--glow)*1.5)) 0%, rgba(245,224,0,calc(var(--glow)*1.05)) 28%, rgba(220,150,0,calc(var(--glow)*0.5)) 52%, rgba(245,224,0,0) 74%); filter:blur(14px); animation:breathe 7s ease-in-out infinite;"></div>
+        <div style="position:absolute; left:50%; top:40%; width:55%; height:42%; transform:translate(-50%,-50%); background:radial-gradient(closest-side, rgba(255,255,235,calc(var(--glow)*1.6)) 0%, rgba(255,240,140,calc(var(--glow)*0.9)) 40%, rgba(245,224,0,0) 72%); filter:blur(8px); animation:breathe 5s ease-in-out infinite 0.5s;"></div>
+        <div style="position:absolute; inset:0; background:radial-gradient(80% 50% at 50% 116%, rgba(8,8,7,0.72) 0%, rgba(8,8,7,0) 56%);"></div>
+
+        <button id="resume-card" class="resume-card" aria-label="Preview résumé PDF">
+          <span class="rc-tag">// RÉSUMÉ · PDF</span>
+          <span class="rc-doc">
+            <iframe class="rc-thumb" src="./CV/Resume%202.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=FitH" tabindex="-1" aria-hidden="true" loading="lazy"></iframe>
+            <span class="rc-shine"></span>
+            <span class="rc-cta"><span class="rc-cta-text">Click to preview</span><span class="rc-cta-icon">↗</span></span>
+          </span>
+        </button>
+
+        <div style="position:absolute; left:22px; bottom:24px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.16em; color:rgba(245,224,0,0.55); text-transform:uppercase; z-index:4;">// based in bangalore</div>
+      </div>
+      <div style="position:absolute; top:10px; right:-4px; writing-mode:vertical-rl; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.22em; color:var(--accent); z-index:2;">ABOUT</div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="grid-2" style="position:relative; padding:clamp(64px,9vw,150px) clamp(22px,3vw,46px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(34px,5vw,84px); align-items:center; overflow:hidden;">
+    <div class="reveal" style="position:relative;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.2em; color:rgba(244,244,242,0.42); margin-bottom:clamp(26px,3.6vw,46px);">(02) — SELECTED WORK</div>
+      <div id="work-list" style="position:relative; z-index:2; display:flex; flex-direction:column;">
+        <!-- work items injected by script -->
+      </div>
+    </div>
+
+    <div class="reveal" style="position:relative;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.16em; color:rgba(244,244,242,0.5); margin-bottom:16px;"><span id="active-year">2025</span><a id="preview-repo" href="#" target="_blank" rel="noopener" class="navlink" style="color:var(--accent); text-decoration:none;">↗ VIEW REPO</a></div>
+      <div class="preview-box" style="position:relative;">
+        <div id="card-stack" class="card-stack"></div>
+      </div>
+      <div id="preview-hint" class="preview-hint">Hover to fan · click for summary</div>
+      <div id="preview-summary" class="preview-summary"></div>
+      <div style="position:absolute; top:32px; right:-4px; writing-mode:vertical-rl; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.22em; color:var(--accent);">PROJECTS</div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE (EXPERIENCE + EDUCATION) ============ -->
+  <section id="timeline" style="position:relative; padding:clamp(64px,9vw,150px) clamp(22px,3vw,46px);">
+    <div class="reveal" style="max-width:1000px; margin:0 auto clamp(36px,5vw,70px);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.2em; color:rgba(244,244,242,0.42); margin-bottom:clamp(20px,2.4vw,34px);">(03) — EXPERIENCE &amp; EDUCATION</div>
+      <p style="margin:0; font-size:clamp(26px,3.2vw,52px); line-height:1.1; letter-spacing:-0.02em; color:#F1F1EE;">The <span style="font-weight:700; color:var(--accent);">path</span> so far.</p>
+    </div>
+
+    <div style="position:relative; max-width:1000px; margin:0 auto; padding-left:clamp(46px,6vw,82px);">
+      <div style="position:absolute; left:clamp(15px,2.2vw,28px); top:6px; bottom:6px; width:1px; background:linear-gradient(180deg, transparent, rgba(245,224,0,0.55) 4%, rgba(245,224,0,0.55) 96%, transparent);"></div>
+      <div id="timeline-list"><!-- timeline items injected by script --></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <section id="contact" style="position:relative; min-height:100vh; display:flex; flex-direction:column; padding:clamp(22px,3vw,46px); box-sizing:border-box; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(circle, rgba(245,224,0,0.18) 0.9px, transparent 1.5px); background-size:13px 13px; opacity:calc(var(--glow)*0.7); animation:breathe 12s ease-in-out infinite; -webkit-mask-image:radial-gradient(120% 78% at 50% 30%, #000 0%, #000 38%, transparent 72%); mask-image:radial-gradient(120% 78% at 50% 30%, #000 0%, #000 38%, transparent 72%);"></div>
+
+    <div class="reveal grid-3" style="position:relative; z-index:2; display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.07em;">
+      <div>
+        <div style="color:#F6F6F3;"><a href="mailto:shlokgraman@gmail.com" class="navlink">shlokgraman@gmail.com</a></div>
+        <div style="color:rgba(244,244,242,0.5); margin-top:9px;">Bangalore, India</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; color:#F6F6F3;">
+        <a href="https://github.com/gshlok" class="navlink" target="_blank" rel="noopener">GITHUB</a>
+        <a href="https://in.linkedin.com/in/shlok-g" class="navlink" target="_blank" rel="noopener">LINKEDIN</a>
+        <a href="mailto:shlokgraman@gmail.com" class="navlink">EMAIL</a>
+        <a href="./CV/Resume%202.pdf" class="navlink" download="Shlok-Resume.pdf" style="color:var(--accent);">RESUME ↓</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; align-items:flex-end; color:#F6F6F3;">
+        <a href="#work" class="navlink">WORK</a>
+        <a href="#about" class="navlink">ABOUT</a>
+        <a href="#contact" class="navlink">CONTACT</a>
+      </div>
+    </div>
+
+    <div style="flex:1; min-height:30px;"></div>
+
+    <div class="reveal" style="position:relative; z-index:2; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 clamp(22px,3.4vw,64px); line-height:0.84; letter-spacing:-0.035em;">
+      <span style="font-weight:800; font-size:clamp(74px,17vw,300px); color:#F6F6F3;">G</span>
+      <span style="display:inline-flex; align-items:baseline;">
+        <span style="font-weight:800; font-size:clamp(74px,17vw,300px); color:#F6F6F3;">Shlok</span><span style="font-weight:800; font-size:clamp(74px,17vw,300px); color:var(--accent);">.</span>
+      </span>
+    </div>
+  </section>
+
+</div>
+
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" aria-label="Previous image">‹</button>
+  <button class="lb-nav lb-next" aria-label="Next image">›</button>
+  <figure class="lb-fig">
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap" class="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<div id="pdfbox" class="pdfbox" aria-hidden="true">
+  <div class="pdf-panel">
+    <div class="pdf-bar">
+      <span class="pdf-title">SHLOK G · RÉSUMÉ</span>
+      <div class="pdf-actions">
+        <a class="pdf-dl" href="./CV/Resume%202.pdf" download="Shlok-Resume.pdf">Download ↓</a>
+        <button class="pdf-close" aria-label="Close">×</button>
+      </div>
+    </div>
+    <iframe id="pdf-frame" class="pdf-frame" src="" title="Résumé preview"></iframe>
+  </div>
+</div>
+
+<script>
+(function () {
+  /* ----- data ----- */
+  var works = [
+    {
+      name: 'P2P Game Streaming', year: '2026', tag: 'WebRTC · C',
+      href: 'https://github.com/gshlok/p2pgamestreaming',
+      tagline: 'Peer-assisted runtime asset streaming for games — LAN-based P2P distribution via WebRTC DataChannels.',
+      summary: 'Players on the same LAN share already-cached game assets directly over WebRTC DataChannels, cutting origin bandwidth and load times. Asset interception happens at the browser fetch layer with SHA-256 verification — so the game engine needs zero modification, and any peer can transparently fall back to the origin server.',
+      tech: ['C', 'WebRTC', 'Node.js', 'WASM'],
+      shots: [
+        { src: './images/projects/p2p-1.jpg', cap: 'Live peer/origin asset sourcing across Tomb Raider levels' },
+        { src: './images/projects/p2p-2.jpg', cap: 'Swarm cache + bandwidth savings running Freedoom' }
+      ],
+      grad: 'radial-gradient(120% 110% at 26% 16%, #FFF4A8 0%, rgba(255,244,168,0) 46%), radial-gradient(120% 100% at 80% 74%, #FFB400 0%, rgba(255,180,0,0) 56%), linear-gradient(150deg, #F5E000 0%, #E89400 44%, #6b4d00 100%)'
+    },
+    {
+      name: 'Agentic Video Editor', year: '2025', tag: 'AI Agent',
+      href: 'https://github.com/gshlok/agenticvideoeditor',
+      tagline: 'An AI agent that edits video from natural-language instructions — plan, cut, and render autonomously.',
+      summary: 'A natural-language video editor: type a request like "make this cinematic" or "trim the first 5 seconds" and the agent turns it into a real edit plan, then executes the cuts, effects, and render across the timeline on its own. Built around an LLM agent loop driving FFmpeg under the hood.',
+      tech: ['Python', 'LLM Agents', 'FFmpeg'],
+      shots: [
+        { src: './images/projects/ave-1.png', cap: 'Natural-language editor — "make this cinematic" drives the timeline' },
+        { src: './images/projects/ave-2.png', cap: 'AI audio tools — voice isolation, noise reduction and mixing applied on command' },
+        { src: './images/projects/ave-3.png', cap: 'Layer stack — managing video, adjustment and audio tracks autonomously' }
+      ],
+      grad: 'radial-gradient(110% 100% at 72% 20%, #FFE680 0%, rgba(255,230,128,0) 52%), linear-gradient(205deg, #FFD000 0%, #D69400 42%, #463300 100%)'
+    },
+    {
+      name: 'Time-Sink Estimator', year: '2025', tag: 'ML · Streamlit',
+      href: 'https://github.com/gshlok/time-sink-estimator',
+      tagline: 'AI-powered game time predictor — recommends games and forecasts playtime from Steam profiles.',
+      summary: 'Pick your favourite tags, genres, price range and minimum playtime, and the app recommends matching games — then uses a Random Forest model trained on Steam data to predict how many hours you are likely to sink into each one, surfaced in minutes and hours.',
+      tech: ['Python', 'scikit-learn', 'Streamlit'],
+      shots: [
+        { src: './images/projects/tse-1.jpg', cap: 'Arcade-style input panel — pick tags, price and min playtime' },
+        { src: './images/projects/tse-2.jpg', cap: 'Top game recommendations with ML-predicted playtime' }
+      ],
+      grad: 'conic-gradient(from 210deg at 58% 42%, #FFE600, #E89400, #5f4500, #F5E000, #FFE600)'
+    }
+  ];
+
+  var timeline = [
+    { kind: 'Work', date: 'Jun 2026 — Present', title: 'AI Intern', org: 'Rilo · Bangalore, Karnataka', links: [{ label: 'Website', href: 'https://www.getrilo.ai' }, { label: 'LinkedIn', href: 'https://www.linkedin.com/company/getriloai/' }] },
+    { kind: 'Work', date: 'Nov 2025 — Jan 2026', title: 'Automation Intern', org: 'Rilo · Bangalore, Karnataka', links: [{ label: 'Website', href: 'https://www.getrilo.ai' }, { label: 'LinkedIn', href: 'https://www.linkedin.com/company/getriloai/' }] },
+    { kind: 'Work', date: 'Dec 2024 — Present', title: 'Volunteer & Event Organizer', org: 'Coding Club, RV College of Engineering · Bangalore', links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/company/coding-club-rvce/' }] },
+    { kind: 'Education', date: '2024 — Present', title: 'BE in Information Science', org: 'RV College of Engineering', links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/school/rvcengineering/' }] },
+    { kind: 'Education', date: '2022 — 2024', title: 'II PU', org: 'RVPB PU College', links: [] },
+    { kind: 'Education', date: 'Completed 2022', title: 'X CBSE Board', org: 'SVEI Public School', links: [] }
+  ];
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  /* ----- selected work list + preview ----- */
+  var listEl = document.getElementById('work-list');
+  var yearEl = document.getElementById('active-year');
+  var stackEl = document.getElementById('card-stack');
+  var repoEl = document.getElementById('preview-repo');
+  var hintEl = document.getElementById('preview-hint');
+  var sumEl = document.getElementById('preview-summary');
+  var activeIdx = 0;
+
+  function buildStack(w) {
+    stackEl.innerHTML = '';
+    var shots = w.shots || [];
+    stackEl.classList.toggle('multi', shots.length > 1);
+
+    if (!shots.length) {
+      var ph = document.createElement('div');
+      ph.className = 'stack-card front';
+      ph.style.setProperty('--d', '0');
+      ph.style.setProperty('--z', '50');
+      ph.style.setProperty('--zh', '50');
+      ph.innerHTML = '<div class="stack-ph"><span class="stack-ph-name">' + esc(w.name) + '</span><span class="stack-ph-sub">Preview coming soon</span></div>';
+      stackEl.appendChild(ph);
+      return;
+    }
+
+    shots.forEach(function (s, k) {
+      var c = document.createElement('div');
+      c.className = 'stack-card' + (k === 0 ? ' front' : '');
+      c.style.setProperty('--d', String(k));      // depth → CSS drives the fan on hover
+      c.style.setProperty('--z', String(50 - k)); // rest: first shot on top
+      c.style.setProperty('--zh', String(50 + k));// hover: deeper cards come forward
+      c._shot = s;
+      c.innerHTML = '<img src="' + esc(s.src) + '" alt="' + esc(s.cap) + '" loading="lazy">' +
+        '<div class="stack-cap">' + esc(s.cap) + '</div>';
+      stackEl.appendChild(c);
+    });
+  }
+
+  function buildSummary(w) {
+    var pills = w.tech.map(function (t) { return '<span class="ps-pill">' + esc(t) + '</span>'; }).join('');
+    sumEl.innerHTML =
+      '<div class="ps-inner">' +
+        '<p class="ps-text">' + esc(w.summary || w.tagline) + '</p>' +
+        '<div class="ps-tech">' + pills + '</div>' +
+        '<a class="ps-link" href="' + esc(w.href) + '" target="_blank" rel="noopener">↗ View on GitHub</a>' +
+      '</div>';
+  }
+
+  function setSummary(open) {
+    sumEl.classList.toggle('open', open);
+    stackEl.classList.toggle('zoomable', open && !!stackEl.querySelector('img'));
+    if (hintEl) {
+      hintEl.textContent = open
+        ? (stackEl.querySelector('img') ? 'Click an image to enlarge · Esc to close' : '')
+        : 'Hover to fan · click for summary';
+      hintEl.classList.toggle('hidden', open && !stackEl.querySelector('img'));
+    }
+  }
+
+  // first click reveals the summary; once open, clicking an image opens it in a popup
+  stackEl.addEventListener('click', function (e) {
+    if (!sumEl.classList.contains('open')) { setSummary(true); return; }
+    var card = e.target.closest ? e.target.closest('.stack-card') : null;
+    if (card && card._shot) {
+      var shots = (works[activeIdx] && works[activeIdx].shots) || [];
+      openLightbox(shots, shots.indexOf(card._shot));
+    }
+  });
+
+  /* ----- lightbox popup ----- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-cap');
+  var lbPrev = lb.querySelector('.lb-prev');
+  var lbNext = lb.querySelector('.lb-next');
+  var lbShots = [];
+  var lbIdx = 0;
+
+  function renderLightbox() {
+    var shot = lbShots[lbIdx];
+    if (!shot) return;
+    lbImg.src = shot.src;
+    lbImg.alt = shot.cap || '';
+    lbCap.textContent = shot.cap || '';
+    var many = lbShots.length > 1;
+    lbPrev.classList.toggle('hidden', !many);
+    lbNext.classList.toggle('hidden', !many);
+  }
+  function openLightbox(shots, idx) {
+    lbShots = shots || [];
+    lbIdx = idx < 0 ? 0 : idx;
+    renderLightbox();
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  function stepLightbox(dir) {
+    if (lbShots.length < 2) return;
+    lbIdx = (lbIdx + dir + lbShots.length) % lbShots.length;
+    renderLightbox();
+  }
+  lbPrev.addEventListener('click', function (e) { e.stopPropagation(); stepLightbox(-1); });
+  lbNext.addEventListener('click', function (e) { e.stopPropagation(); stepLightbox(1); });
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb || (e.target.closest && e.target.closest('.lb-close'))) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') stepLightbox(-1);
+    else if (e.key === 'ArrowRight') stepLightbox(1);
+  });
+
+  /* ----- résumé PDF preview ----- */
+  var resumeCard = document.getElementById('resume-card');
+  var pdfBox = document.getElementById('pdfbox');
+  var pdfFrame = document.getElementById('pdf-frame');
+  var pdfSrc = './CV/Resume%202.pdf#view=FitH';
+
+  function openPdf() {
+    if (!pdfFrame.getAttribute('src')) pdfFrame.setAttribute('src', pdfSrc);
+    pdfBox.classList.add('open');
+    pdfBox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdf() {
+    pdfBox.classList.remove('open');
+    pdfBox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  if (resumeCard) resumeCard.addEventListener('click', openPdf);
+  pdfBox.addEventListener('click', function (e) {
+    if (e.target === pdfBox || (e.target.closest && e.target.closest('.pdf-close'))) closePdf();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && pdfBox.classList.contains('open')) closePdf();
+  });
+
+  function setActive(i) {
+    activeIdx = i;
+    listEl.querySelectorAll('.work-item').forEach(function (el, j) {
+      el.querySelector('.work-name').style.color = j === i ? '#F6F6F3' : 'rgba(246,246,243,0.26)';
+      el.querySelector('.work-arrow').style.color = j === i ? 'var(--accent)' : 'transparent';
+    });
+    var w = works[i];
+    yearEl.textContent = w.year;
+    repoEl.href = w.href;
+    buildStack(w);
+    buildSummary(w);
+    setSummary(false);
+  }
+
+  works.forEach(function (w, i) {
+    var a = document.createElement('a');
+    a.href = w.href;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.className = 'work-item';
+    a.style.cssText = 'text-decoration:none; cursor:pointer; display:block; padding:clamp(8px,1.2vw,16px) 0; border-bottom:1px solid rgba(246,246,243,0.08);';
+    a.innerHTML =
+      '<div style="display:flex; align-items:baseline; gap:16px;">' +
+        '<span class="work-name" style="font-weight:400; font-size:clamp(32px,4.8vw,72px); line-height:1.02; letter-spacing:-0.025em; transition:color .35s ease;">' + esc(w.name) + '</span>' +
+        '<span class="work-arrow" style="font-weight:300; font-size:clamp(24px,3.4vw,52px); line-height:1; transition:color .35s ease;">→</span>' +
+      '</div>' +
+      '<span style="font-family:\'JetBrains Mono\',monospace; font-size:10px; letter-spacing:0.16em; color:rgba(244,244,242,0.3); text-transform:uppercase; display:block; margin-top:4px;">' + esc(w.year) + ' — ' + esc(w.tag) + '</span>';
+    a.addEventListener('mouseenter', function () { setActive(i); });
+    a.addEventListener('focus', function () { setActive(i); });
+    listEl.appendChild(a);
+  });
+  setActive(0);
+
+  /* ----- timeline ----- */
+  var tlEl = document.getElementById('timeline-list');
+  timeline.forEach(function (t, i) {
+    var wrap = document.createElement('div');
+    wrap.className = 'reveal';
+    wrap.style.cssText = 'position:relative; border-bottom:1px solid rgba(246,246,243,0.08);';
+
+    var dot = '<div style="position:absolute; left:calc(-1 * clamp(46px,6vw,82px) + clamp(15px,2.2vw,28px)); top:clamp(26px,3vw,38px); width:11px; height:11px; border-radius:50%; background:var(--accent); transform:translateX(-50%); box-shadow:0 0 10px rgba(245,224,0,calc(var(--glow)*0.7)); animation:pulse 4s ease-in-out infinite; animation-delay:' + (i * 0.4) + 's;"></div>';
+
+    // First link is the "primary" target — clicking the entry text navigates there.
+    // Multi-link entries (Rilo) also keep their dedicated pill buttons below.
+    var primary = t.links.length ? t.links[0] : null;
+    var multiple = t.links.length > 1;
+
+    var pills = '';
+    if (multiple) {
+      pills = '<div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">';
+      t.links.forEach(function (lnk) {
+        pills += '<a href="' + esc(lnk.href) + '" class="pill" ' + (lnk.href.indexOf('#') === 0 ? '' : 'target="_blank" rel="noopener"') + '><span class="pill-arrow">↗</span>' + esc(lnk.label) + '</a>';
+      });
+      pills += '</div>';
+    }
+
+    var textRows =
+        '<div style="display:flex; gap:14px; align-items:center; font-family:\'JetBrains Mono\',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(244,244,242,0.45); margin-bottom:10px;">' +
+          '<span style="color:var(--accent);">' + esc(t.kind) + '</span>' +
+          '<span style="opacity:.4;">•</span>' +
+          '<span>' + esc(t.date) + '</span>' +
+        '</div>' +
+        '<div style="font-weight:600; font-size:clamp(24px,3.2vw,46px); line-height:1.06; letter-spacing:-0.02em; color:inherit;">' + esc(t.title) + '</div>' +
+        '<div style="font-weight:400; font-size:clamp(15px,1.6vw,20px); color:rgba(244,244,242,0.55); margin-top:8px;">' + esc(t.org) + '</div>';
+
+    var textBlock;
+    if (primary) {
+      textBlock = '<a href="' + esc(primary.href) + '" class="timeline-link" ' + (primary.href.indexOf('#') === 0 ? '' : 'target="_blank" rel="noopener"') + ' style="display:block; text-decoration:none; color:#F1F1EE;">' + textRows + '</a>';
+    } else {
+      textBlock = '<div style="display:block; color:#F1F1EE;">' + textRows + '</div>';
+    }
+
+    wrap.innerHTML = dot +
+      '<div style="padding:clamp(22px,2.8vw,38px) 0;">' + textBlock + pills + '</div>';
+    tlEl.appendChild(wrap);
+  });
+
+  /* ----- scroll reveal (replaces CSS animation-timeline:view()) ----- */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ----- about: typewriter effect ----- */
+  var aboutP = document.getElementById('about-text');
+  if (aboutP) {
+    // styled runs that make up the sentence (preserves the accent "Shlok")
+    var twSegments = [
+      { t: 'I am ' },
+      { t: 'Shlok', cls: 'tw-accent' },
+      { t: '. A 4th Sem Information Science undergraduate at RVCE and AI intern at Rilo, I build AI agents and automations.' }
+    ];
+    // lock in the final height so the layout doesn't jump while typing
+    aboutP.style.minHeight = aboutP.offsetHeight + 'px';
+
+    var twReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var twStarted = false;
+
+    function twRenderFull() {
+      aboutP.innerHTML = '';
+      twSegments.forEach(function (s) {
+        var span = document.createElement('span');
+        if (s.cls) span.className = s.cls;
+        span.textContent = s.t;
+        aboutP.appendChild(span);
+      });
+    }
+
+    function twType() {
+      if (twStarted) return;
+      twStarted = true;
+      if (twReduce) { twRenderFull(); return; }
+
+      aboutP.innerHTML = '';
+      var spans = twSegments.map(function (s) {
+        var span = document.createElement('span');
+        if (s.cls) span.className = s.cls;
+        aboutP.appendChild(span);
+        return span;
+      });
+      var cursor = document.createElement('span');
+      cursor.className = 'tw-cursor';
+      aboutP.appendChild(cursor);
+
+      var si = 0, ci = 0;
+      (function step() {
+        if (si >= twSegments.length) { aboutP.classList.add('tw-done'); return; }
+        var seg = twSegments[si];
+        var ch = seg.t.charAt(ci);
+        spans[si].textContent += ch;
+        ci++;
+        if (ci >= seg.t.length) { si++; ci = 0; }
+        // slight pause after sentence punctuation for a natural cadence
+        var delay = (ch === '.' || ch === ',') ? 220 : 26 + Math.round((si + ci) % 3) * 8;
+        setTimeout(step, delay);
+      })();
+    }
+
+    if ('IntersectionObserver' in window) {
+      aboutP.textContent = '';   // start blank; fill when it scrolls into view
+      var twIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && e.intersectionRatio >= 0.45) { twType(); twIO.disconnect(); }
+        });
+      }, { threshold: [0, 0.45, 0.7] });
+      twIO.observe(aboutP);
+    } else {
+      twRenderFull();
+    }
+  }
+
+  /* ----- hero glow parallax ----- */
+  var hero = document.getElementById('hero');
+  if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var def = { x: 74, y: 17 }, def2 = { x: 90, y: 40 };
+    var off = { x: 0, y: 0 };
+    var c = { x: def.x, y: def.y }, c2 = { x: def2.x, y: def2.y };
+    hero.addEventListener('pointermove', function (e) {
+      var r = hero.getBoundingClientRect();
+      off.x = ((e.clientX - r.left) / r.width) * 100 - 50;
+      off.y = ((e.clientY - r.top) / r.height) * 100 - 50;
+    });
+    hero.addEventListener('pointerleave', function () { off.x = 0; off.y = 0; });
+    (function loop() {
+      var tx = def.x + off.x * 0.22, ty = def.y + off.y * 0.22;
+      var t2x = def2.x + off.x * 0.12, t2y = def2.y + off.y * 0.12;
+      c.x += (tx - c.x) * 0.09; c.y += (ty - c.y) * 0.09;
+      c2.x += (t2x - c2.x) * 0.05; c2.y += (t2y - c2.y) * 0.05;
+      hero.style.setProperty('--gx', c.x.toFixed(2) + '%');
+      hero.style.setProperty('--gy', c.y.toFixed(2) + '%');
+      hero.style.setProperty('--gx2', c2.x.toFixed(2) + '%');
+      hero.style.setProperty('--gy2', c2.y.toFixed(2) + '%');
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  /* ----- ambient glow: glides across the screen as the active section changes ----- */
+  var ambient = document.getElementById('ambient-glow');
+
+  // per-section resting spot for the glow — moving between them animates the travel
+  var glowAnchors = {
+    hero:     { x: 78, y: 20, x2: 92, y2: 42, op: 0 },   // hero has its own glow
+    about:    { x: 24, y: 40, x2: 84, y2: 26, op: 1 },
+    work:     { x: 82, y: 34, x2: 16, y2: 78, op: 1 },
+    timeline: { x: 46, y: 22, x2: 66, y2: 82, op: 1 },
+    contact:  { x: 50, y: 30, x2: 50, y2: 72, op: 0 }    // contact has its dotted glow
+  };
+  var sections = ['hero', 'about', 'work', 'timeline', 'contact']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+
+  if (ambient && 'IntersectionObserver' in window) {
+    var ratios = {};
+    var current = 'hero';
+    var actIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { ratios[en.target.id] = en.intersectionRatio; });
+      // active = the most-visible section
+      var best = current, bestR = -1;
+      sections.forEach(function (s) {
+        var r = ratios[s.id] || 0;
+        if (r > bestR) { bestR = r; best = s.id; }
+      });
+      current = best;
+      ambient.style.opacity = String((glowAnchors[current] || glowAnchors.hero).op);
+    }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function (s) { actIO.observe(s); });
+
+    /* gentle pointer parallax layered on top of the per-section anchor */
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var aoff = { x: 0, y: 0 };
+    var ac = { x: 78, y: 20 }, ac2 = { x: 92, y: 42 };
+    if (!reduce) {
+      window.addEventListener('pointermove', function (e) {
+        aoff.x = (e.clientX / window.innerWidth) * 100 - 50;
+        aoff.y = (e.clientY / window.innerHeight) * 100 - 50;
+      });
+    }
+    (function aloop() {
+      var a = glowAnchors[current] || glowAnchors.hero;
+      var tx = a.x + aoff.x * 0.18, ty = a.y + aoff.y * 0.18;
+      var t2x = a.x2 + aoff.x * 0.10, t2y = a.y2 + aoff.y * 0.10;
+      // slow ease → the glow visibly glides across the screen between sections
+      ac.x += (tx - ac.x) * 0.045; ac.y += (ty - ac.y) * 0.045;
+      ac2.x += (t2x - ac2.x) * 0.035; ac2.y += (t2y - ac2.y) * 0.035;
+      ambient.style.setProperty('--agx', ac.x.toFixed(2) + '%');
+      ambient.style.setProperty('--agy', ac.y.toFixed(2) + '%');
+      ambient.style.setProperty('--agx2', ac2.x.toFixed(2) + '%');
+      ambient.style.setProperty('--agy2', ac2.y.toFixed(2) + '%');
+      requestAnimationFrame(aloop);
+    })();
+  }
+})();
+</script>
+
+<!-- Elfsight Chatbot -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-9c648a72-05d5-4081-8c12-0efa5eed319c" data-elfsight-app-lazy></div>
+</body>
 </html>

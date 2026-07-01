@@ -14,3 +14,9 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
+
+# Personal resume library (kept out of public portfolio)
+resumes/
+
+# Local CV backups
+*.old.pdf
